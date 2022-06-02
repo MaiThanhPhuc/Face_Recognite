@@ -1,7 +1,7 @@
 # -----------------------------------------------------------------------------------------
 # Code base on http://krasserm.github.io/2018/02/07/deep-face-recognition/
 # -----------------------------------------------------------------------------------------
-#%%
+
 #%% import thư viện với một số module
 from asyncio.windows_events import NULL
 from model import create_model
@@ -86,7 +86,7 @@ count = 1
 n = 0
 while(count<=100):
     [success, frame]  = vid.read()
-    cv2.rectangle(frame, (194, 50), (251+195, 251+115), (0,255,0),1)
+    cv2.rectangle(frame, (195, 50), (251+195, 251+115), (0,255,0),1)
     if success:
             imgROI = frame[115:250+115,195:(195+250)] #tạo ra ảnh
             tempImg = align_image(imgROI)
@@ -147,7 +147,7 @@ X_test = embedded[test_idx]
 y_train = labels[train_idx]
 y_test = labels[test_idx]
 
-#Import một số model classifi
+#Import một số model classification
 from sklearn.svm import SVC, LinearSVC
 from sklearn.linear_model import SGDClassifier       
 from sklearn.multiclass import OneVsRestClassifier
@@ -471,10 +471,6 @@ for i, t in enumerate(set(targets)):
     plt.scatter(X_embedded[idx, 0], X_embedded[idx, 1], label=t)   
 
 plt.legend(bbox_to_anchor=(1, 1))
-
-
-
-
 
 
 

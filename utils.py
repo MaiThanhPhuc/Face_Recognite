@@ -8,7 +8,7 @@ import os
 
 from numpy import genfromtxt
 from keras.layers import Conv2D, ZeroPadding2D, Activation
-from keras.layers.normalization import BatchNormalization
+from keras.layers import BatchNormalization
 
 _FLOATX = 'float32'
 
